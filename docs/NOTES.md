@@ -2,6 +2,9 @@
 # NOTES
 
 - [Material complementar das aulas][1]
+- [Get started with Swashbuckle and ASP.NET Core][2]
+- 
+- TBD
 
 ---
 
@@ -42,3 +45,4 @@ Lembre-se de verificar as configurações de desenvolvimento no arquivo appsetti
 <!-- Footnote links -->
 
 [1]: https://efficient-sloth-d85.notion.site/NLW-14-Expert-9e11ff472de64b08a5f9e277a20c3ecc?pvs=18
+[2]: https://learn.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-8.0&tabs=visual-studio
