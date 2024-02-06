@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using RocketseatAuction.API.Entities;
-using RocketseatAuction.API.Repositories;
+using RocketseatAuction.API.Core.Entities;
+using RocketseatAuction.API.Core.Repositories;
 
-namespace RocketseatAuction.API.UseCases.Auctions.GetCurrent;
+namespace RocketseatAuction.API.Core.UseCases.Auctions.GetCurrent;
 
 public class GetCurrentAuctionUseCase
 {

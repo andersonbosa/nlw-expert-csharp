@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using RocketseatAuction.API.Entities;
+using RocketseatAuction.API.Core.Entities;
 
-namespace RocketseatAuction.API.Repositories;
+namespace RocketseatAuction.API.Core.Repositories;
 
 public class RocketseatAuctionDbContext : DbContext
 {

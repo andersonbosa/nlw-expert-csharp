@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RocketseatAuction.API.Entities;
-using RocketseatAuction.API.UseCases.Auctions.GetCurrent;
-using RocketseatAuction.API.UseCases.Auctions.GetAuctionByID;
+using RocketseatAuction.API.Core.Entities;
+using RocketseatAuction.API.Core.UseCases.Auctions.GetCurrent;
+using RocketseatAuction.API.Core.UseCases.Auctions.GetAuctionByID;
 
-namespace RocketseatAuction.API.Controllers;
+namespace RocketseatAuction.API.Core.Controllers;
 
 [Route("/api/v1/[controller]")]
 [ApiController]
