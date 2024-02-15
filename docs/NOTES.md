@@ -6,12 +6,14 @@
 - 
 - TBD
 
----
+-----------------------------------------
 
 # Drafts
 
 **Instalar .NET**
 https://dotnet.microsoft.com/en-us/download
+
+-----------------------------------------
 
 # Getting started with C#
 
@@ -40,6 +42,9 @@ Lembre-se de verificar as configurações de desenvolvimento no arquivo appsetti
     ```bash
     open http://localhost:5123/swagger/index.html
     ```
+
+-----------------------------------------
+
 
 
 <!-- Footnote links -->

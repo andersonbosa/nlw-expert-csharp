@@ -5,9 +5,8 @@ using RocketseatAuction.API.Core.UseCases.Auctions.GetAuctionByID;
 
 namespace RocketseatAuction.API.Core.Controllers;
 
-[Route("/api/v1/[controller]")]
 [ApiController]
-public class AuctionController : ControllerBase
+public class AuctionController : RocketseatAuctionBaseController
 {
   [HttpGet]
   [ProducesResponseType(typeof(Auction), StatusCodes.Status200OK)]
