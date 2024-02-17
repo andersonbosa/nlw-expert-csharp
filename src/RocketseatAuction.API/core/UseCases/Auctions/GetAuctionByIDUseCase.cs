@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using RocketseatAuction.API.Core.Contracts;
-using RocketseatAuction.API.Core.Entities;
+using RocketseatAuction.API.Contracts;
+using RocketseatAuction.API.Entities;
 
-namespace RocketseatAuction.API.Core.UseCases.Auctions.GetAuctionByID;
+namespace RocketseatAuction.API.UseCases.Auctions.GetAuctionByID;
 
 public class GetAuctionByIDUseCase
 {

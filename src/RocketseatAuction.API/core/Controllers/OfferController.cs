@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RocketseatAuction.API.Core.Communication.Requests;
-using RocketseatAuction.API.Core.Filters;
-using RocketseatAuction.API.Core.UseCases.Offers.CreateOffer;
+using RocketseatAuction.API.Communication.Requests;
+using RocketseatAuction.API.Filters;
+using RocketseatAuction.API.UseCases.Offers.CreateOffer;
 
-namespace RocketseatAuction.API.Core.Controllers;
+namespace RocketseatAuction.API.Controllers;
 
 [ServiceFilter(typeof(AuthenticationUserAttribute))]
 public class OfferController : RocketseatAuctionBaseController

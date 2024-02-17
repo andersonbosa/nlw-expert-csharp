@@ -1,4 +1,4 @@
 
-namespace RocketseatAuction.API.Core.Communication;
+namespace RocketseatAuction.API.Communication;
 
 public class Communication { }

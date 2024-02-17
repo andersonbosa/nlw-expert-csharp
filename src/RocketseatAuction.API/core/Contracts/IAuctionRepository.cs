@@ -1,5 +1,5 @@
-namespace RocketseatAuction.API.Core.Contracts;
-using RocketseatAuction.API.Core.Entities;
+namespace RocketseatAuction.API.Contracts;
+using RocketseatAuction.API.Entities;
 
 public interface IAuctionRepository
 {

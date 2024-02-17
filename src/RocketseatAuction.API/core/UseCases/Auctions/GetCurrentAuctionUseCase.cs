@@ -1,7 +1,7 @@
-using RocketseatAuction.API.Core.Contracts;
-using RocketseatAuction.API.Core.Entities;
+using RocketseatAuction.API.Contracts;
+using RocketseatAuction.API.Entities;
 
-namespace RocketseatAuction.API.Core.UseCases.Auctions.GetCurrent;
+namespace RocketseatAuction.API.UseCases.Auctions.GetCurrent;
 
 public class GetCurrentAuctionUseCase
 {

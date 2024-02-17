@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using RocketseatAuction.API.Core.Entities;
-using RocketseatAuction.API.Core.UseCases.Auctions.GetCurrent;
+using RocketseatAuction.API.Entities;
+using RocketseatAuction.API.UseCases.Auctions.GetCurrent;
 
-namespace RocketseatAuction.API.Core.Controllers;
+namespace RocketseatAuction.API.Controllers;
 
 public class AuctionController : RocketseatAuctionBaseController
 {

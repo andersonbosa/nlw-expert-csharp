@@ -1,9 +1,9 @@
-using RocketseatAuction.API.Core.Communication.Requests;
-using RocketseatAuction.API.Core.Contracts;
-using RocketseatAuction.API.Core.Entities;
-using RocketseatAuction.API.Core.Services;
+using RocketseatAuction.API.Communication.Requests;
+using RocketseatAuction.API.Contracts;
+using RocketseatAuction.API.Entities;
+using RocketseatAuction.API.Services;
 
-namespace RocketseatAuction.API.Core.UseCases.Offers.CreateOffer;
+namespace RocketseatAuction.API.UseCases.Offers.CreateOffer;
 
 public class CreateOfferUseCase
 {

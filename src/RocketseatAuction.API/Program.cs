@@ -1,13 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using RocketseatAuction.API.Core.Contracts;
-using RocketseatAuction.API.Core.Filters;
-using RocketseatAuction.API.Core.Repositories;
-using RocketseatAuction.API.Core.Repositories.DataAccess;
-using RocketseatAuction.API.Core.Services;
-using RocketseatAuction.API.Core.UseCases.Auctions.GetAuctionByID;
-using RocketseatAuction.API.Core.UseCases.Auctions.GetCurrent;
-using RocketseatAuction.API.Core.UseCases.Offers.CreateOffer;
+using RocketseatAuction.API.Contracts;
+using RocketseatAuction.API.Filters;
+using RocketseatAuction.API.Repositories;
+using RocketseatAuction.API.Repositories.DataAccess;
+using RocketseatAuction.API.Services;
+using RocketseatAuction.API.UseCases.Auctions.GetAuctionByID;
+using RocketseatAuction.API.UseCases.Auctions.GetCurrent;
+using RocketseatAuction.API.UseCases.Offers.CreateOffer;
 
 // Create a web application builder.
 var builder = WebApplication.CreateBuilder(args);

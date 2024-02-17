@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace RocketseatAuction.API.Core.Controllers;
+namespace RocketseatAuction.API.Controllers;
 
 [Route("api/v1/[controller]")]
 [ApiController]

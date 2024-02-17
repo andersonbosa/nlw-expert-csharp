@@ -1,7 +1,7 @@
-using RocketseatAuction.API.Core.Contracts;
-using RocketseatAuction.API.Core.Entities;
+using RocketseatAuction.API.Contracts;
+using RocketseatAuction.API.Entities;
 
-namespace RocketseatAuction.API.Core.Services;
+namespace RocketseatAuction.API.Services;
 
 public class LoggedUser : ILoggedUser
 {

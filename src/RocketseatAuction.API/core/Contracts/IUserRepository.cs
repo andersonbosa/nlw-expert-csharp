@@ -1,6 +1,6 @@
-using RocketseatAuction.API.Core.Entities;
+using RocketseatAuction.API.Entities;
 
-namespace RocketseatAuction.API.Core.Contracts;
+namespace RocketseatAuction.API.Contracts;
 
 public interface IUserRepository
 {

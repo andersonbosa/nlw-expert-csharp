@@ -1,4 +1,4 @@
 
-namespace RocketseatAuction.API.Core.Filters;
+namespace RocketseatAuction.API.Filters;
 
 public class Filters { }

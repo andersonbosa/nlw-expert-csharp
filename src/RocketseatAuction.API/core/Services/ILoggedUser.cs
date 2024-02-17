@@ -1,8 +1,8 @@
 
 
-using RocketseatAuction.API.Core.Entities;
+using RocketseatAuction.API.Entities;
 
-namespace RocketseatAuction.API.Core.Services;
+namespace RocketseatAuction.API.Services;
 
 public interface ILoggedUser {
   User User();

@@ -25,7 +25,7 @@
           "System.Diagnostics.EventLog": "6.0.0"
         },
         "runtime": {
-          "lib/net6.0/Castle.Core.dll": {
+          "lib/net6.0/Castle.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.1.1.0"
           }

@@ -1,4 +1,4 @@
-namespace RocketseatAuction.API.Core.Entities;
+namespace RocketseatAuction.API.Entities;
 
 public class Offer
 {

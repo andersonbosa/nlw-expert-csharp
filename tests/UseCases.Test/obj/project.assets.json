@@ -21,12 +21,12 @@
           "System.Diagnostics.EventLog": "6.0.0"
         },
         "compile": {
-          "lib/net6.0/Castle.Core.dll": {
+          "lib/net6.0/Castle.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net6.0/Castle.Core.dll": {
+          "lib/net6.0/Castle.dll": {
             "related": ".xml"
           }
         }
@@ -2450,14 +2450,14 @@
         "castle-logo.png",
         "castle.core.5.1.1.nupkg.sha512",
         "castle.core.nuspec",
-        "lib/net462/Castle.Core.dll",
-        "lib/net462/Castle.Core.xml",
-        "lib/net6.0/Castle.Core.dll",
-        "lib/net6.0/Castle.Core.xml",
-        "lib/netstandard2.0/Castle.Core.dll",
-        "lib/netstandard2.0/Castle.Core.xml",
-        "lib/netstandard2.1/Castle.Core.dll",
-        "lib/netstandard2.1/Castle.Core.xml",
+        "lib/net462/Castle.dll",
+        "lib/net462/Castle.xml",
+        "lib/net6.0/Castle.dll",
+        "lib/net6.0/Castle.xml",
+        "lib/netstandard2.0/Castle.dll",
+        "lib/netstandard2.0/Castle.xml",
+        "lib/netstandard2.1/Castle.dll",
+        "lib/netstandard2.1/Castle.xml",
         "readme.txt"
       ]
     },
@@ -2580,7 +2580,7 @@
         "build/netstandard2.0/InstrumentationEngine/ubuntu/x64/libInstrumentationEngine.so",
         "build/netstandard2.0/InstrumentationEngine/x64/MicrosoftInstrumentationEngine_x64.dll",
         "build/netstandard2.0/InstrumentationEngine/x86/MicrosoftInstrumentationEngine_x86.dll",
-        "build/netstandard2.0/Microsoft.CodeCoverage.Core.dll",
+        "build/netstandard2.0/Microsoft.CodeCoverage.dll",
         "build/netstandard2.0/Microsoft.CodeCoverage.Instrumentation.dll",
         "build/netstandard2.0/Microsoft.CodeCoverage.Interprocess.dll",
         "build/netstandard2.0/Microsoft.CodeCoverage.props",
