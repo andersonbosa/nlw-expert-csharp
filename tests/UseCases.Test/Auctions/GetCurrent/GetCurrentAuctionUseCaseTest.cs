@@ -1,3 +1,7 @@
+using Xunit;
+using FluentAssertions;
+using RocketseatAuction.API.Core.UseCases.Auctions.GetCurrent;
+
 namespace UseCases.test.Auctions.GetCurrent;
 
 public class GetCurrentAuctionUseCaseTest
@@ -7,10 +11,13 @@ public class GetCurrentAuctionUseCaseTest
   {
     // AAA test theory:
     // ARRANGE
-    var useCase = new GetCurrentAuctionUseCaseTest();
+    var useCase = new GetCurrentAuctionUseCase(null);
 
     // ACT
+    var auction = useCase.Execute();
 
     // ASSERT
+    // Assert.NotNull(auction);
+    auction.Should().NotBeNull();
   }
 }

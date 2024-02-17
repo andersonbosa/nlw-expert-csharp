@@ -13,6 +13,12 @@
 **Instalar .NET**
 https://dotnet.microsoft.com/en-us/download
 
+**Como referenciar o projeto a ser testado**
+- commit: `feat: dotnet add reference etc/RocketseatAuction.API.csproj`
+
+**Como instalar depêndencias**
+- `dotnet add package FluentAssertions --version 6.12.0` -- https://www.nuget.org/packages/FluentAssertions/
+
 -----------------------------------------
 
 # Getting started with C#
