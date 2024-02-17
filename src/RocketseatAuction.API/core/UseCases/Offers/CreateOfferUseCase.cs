@@ -1,37 +1,35 @@
 using RocketseatAuction.API.Core.Communication.Requests;
+using RocketseatAuction.API.Core.Contracts;
 using RocketseatAuction.API.Core.Entities;
-using RocketseatAuction.API.Core.Repositories;
 using RocketseatAuction.API.Core.Services;
 
 namespace RocketseatAuction.API.Core.UseCases.Offers.CreateOffer;
 
-
 public class CreateOfferUseCase
 {
+    private readonly ILoggedUser _loggedUser;
+    private readonly IOfferRepository _repository;
 
-  private readonly LoggedUser _loggedUser;
-
-  public CreateOfferUseCase(LoggedUser loggedUser) => _loggedUser = loggedUser;
-
-  public int Execute(int itemId, RequestCreateOfferJson request)
-  {
-
-    var repository = new RocketseatAuctionDbContext();
-
-    var user = _loggedUser.User();
-
-    var offerEntity = new Offer
+    public CreateOfferUseCase(ILoggedUser loggedUser, IOfferRepository repository)
     {
-      CreatedOn = DateTime.Now,
-      Price = request.Price,
-      ItemId = itemId,
-      UserId = user.Id,
-    };
+        _loggedUser = loggedUser;
+        _repository = repository;
+    }
 
-    repository.Offers.Add(offerEntity);
+    public int Execute(int itemId, RequestCreateOfferJson request)
+    {
+        var user = _loggedUser.User();
 
-    repository.SaveChanges();
+        var offer = new Offer
+        {
+            CreatedOn = DateTime.Now,
+            ItemId = itemId,
+            Price = request.Price,
+            UserId = user.Id,
+        };
 
-    return offerEntity.Id;
-  }
+        _repository.Add(offer);
+
+        return offer.Id;
+    }
 }

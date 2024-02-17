@@ -1,16 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using RocketseatAuction.API.Core.Contracts;
 using RocketseatAuction.API.Core.Entities;
-using RocketseatAuction.API.Core.Repositories;
 
 namespace RocketseatAuction.API.Core.UseCases.Auctions.GetAuctionByID;
 
 public class GetAuctionByIDUseCase
 {
-  public Auction? Execute(int searchId)
-  {
-    var repository = new RocketseatAuctionDbContext();
+  private readonly IAuctionRepository _repository;
+  public GetAuctionByIDUseCase(IAuctionRepository repositoryInjection) => _repository = repositoryInjection;
 
-    return repository
-      .Auctions
-      .FirstOrDefault(auction => auction.Id == searchId);
-  }
+  public Auction? Execute(int id) => _repository.GetByID(id);
 }

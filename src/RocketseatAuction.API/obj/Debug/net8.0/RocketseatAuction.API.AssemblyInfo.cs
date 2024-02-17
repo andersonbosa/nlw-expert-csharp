@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RocketseatAuction.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83b505b4a7d8a1ee082c88f9877b4031ea6904ad")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+100535f5fa1b405632fd4f4f35c8d7de4b2742a7")]
 [assembly: System.Reflection.AssemblyProductAttribute("RocketseatAuction.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RocketseatAuction.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

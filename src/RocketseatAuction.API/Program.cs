@@ -1,14 +1,21 @@
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using RocketseatAuction.API.Core.Contracts;
 using RocketseatAuction.API.Core.Filters;
+using RocketseatAuction.API.Core.Repositories;
+using RocketseatAuction.API.Core.Repositories.DataAccess;
 using RocketseatAuction.API.Core.Services;
+using RocketseatAuction.API.Core.UseCases.Auctions.GetAuctionByID;
+using RocketseatAuction.API.Core.UseCases.Auctions.GetCurrent;
 using RocketseatAuction.API.Core.UseCases.Offers.CreateOffer;
 
+// Create a web application builder.
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+// Configure Swagger/OpenAPI for API documentation.
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -47,26 +54,42 @@ builder.Services.AddSwaggerGen(options =>
   );
 });
 
-
+// Add scoped services to the container.
 builder.Services.AddScoped<AuthenticationUserAttribute>();
-builder.Services.AddScoped<LoggedUser>();
-builder.Services.AddScoped<CreateOfferUseCase>();
+builder.Services.AddScoped<ILoggedUser, LoggedUser>();
 
+builder.Services.AddScoped<CreateOfferUseCase>();
+builder.Services.AddScoped<GetCurrentAuctionUseCase>();
+builder.Services.AddScoped<GetAuctionByIDUseCase>();
+
+builder.Services.AddScoped<IAuctionRepository, AuctionRepository>();
+builder.Services.AddScoped<IOfferRepository, OfferRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+builder.Services.AddDbContext<RocketseatAuctionDbContext>(options =>
+{
+  options.UseSqlite(@"Data Source=/home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/data/leilaoDbNLW.db");
+});
+
+// Add HttpContextAccessor to the services.
 builder.Services.AddHttpContextAccessor();
 
+// Build the application.
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+  // Enable Swagger UI and documentation in the development environment.
   app.UseSwagger();
   app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
 
+// Map controllers for handling HTTP requests.
 app.MapControllers();
 
+// Run the application.
 app.Run();
