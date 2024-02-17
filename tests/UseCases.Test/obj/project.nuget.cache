@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "VhUx/VjWLkMlj3vBosBe3DwYkLd5GNKA7+lXiJhaQDDkvn1P58eS/zR1g7X0TwNFBrvSqxKRJzU6OW3V25jSbg==",
+  "dgSpecHash": "+3vfShjtu827AD+/IHl/n6EPwx1Ww5A4mGI7aOdBluVmOEj/AmXs2jQAkgqNYRjpAL991CFC+/M36QKFt9ns6Q==",
   "success": true,
   "projectFilePath": "/home/t4inha/devspace/nlw-expert-csharp/tests/UseCases.Test/UseCases.Test.csproj",
   "expectedPackageFiles": [
+    "/home/t4inha/.nuget/packages/bogus/35.4.0/bogus.35.4.0.nupkg.sha512",
     "/home/t4inha/.nuget/packages/castle.core/5.1.1/castle.core.5.1.1.nupkg.sha512",
     "/home/t4inha/.nuget/packages/coverlet.collector/6.0.0/coverlet.collector.6.0.0.nupkg.sha512",
     "/home/t4inha/.nuget/packages/fluentassertions/6.12.0/fluentassertions.6.12.0.nupkg.sha512",
