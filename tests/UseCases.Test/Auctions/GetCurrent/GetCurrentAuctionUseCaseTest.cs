@@ -1,6 +1,7 @@
 using Xunit;
 using FluentAssertions;
 using Moq;
+using RocketseatAuction.API.Core.Entities;
 using RocketseatAuction.API.Core.Contracts;
 using RocketseatAuction.API.Core.UseCases.Auctions.GetCurrent;
 
@@ -13,8 +14,18 @@ public class GetCurrentAuctionUseCaseTest
   {
     // AAA test theory:
     // ARRANGE
+    var auctionReturnExample = new Auction
+    {
+      Id = 1,
+      Name = "name",
+      Price = 300,
+    };
+
     var repositoryMock = new Mock<IAuctionRepository>();
-    
+    repositoryMock
+      .Setup(i => i.GetCurrent())
+      .Returns(auctionReturnExample);
+
     var useCase = new GetCurrentAuctionUseCase(repositoryMock.Object);
 
     // ACT
