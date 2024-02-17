@@ -1,38 +1,51 @@
-using Xunit;
+using Bogus;
 using FluentAssertions;
 using Moq;
-using RocketseatAuction.API.Entities;
 using RocketseatAuction.API.Contracts;
+using RocketseatAuction.API.Entities;
+using RocketseatAuction.API.Enums;
 using RocketseatAuction.API.UseCases.Auctions.GetCurrent;
+using Xunit;
 
-namespace UseCases.test.Auctions.GetCurrent;
+namespace UseCases.Test.Auctions.GetCurrent;
 
 public class GetCurrentAuctionUseCaseTest
 {
   [Fact]
-  public void SuccessCase1()
+  public void Success()
   {
-    // AAA test theory:
-    // ARRANGE
-    var auctionReturnExample = new Auction
-    {
-      Id = 1,
-      Name = "name",
-      Price = 300,
-    };
+    // Arrange
+    var auctionReturnExample = new Faker<Auction>()
+        .RuleFor(auction => auction.Id, f => f.Random.Number(1, 700))
+        .RuleFor(auction => auction.Name, f => f.Lorem.Word())
+        .RuleFor(auction => auction.Starts, f => f.Date.Past())
+        .RuleFor(auction => auction.Ends, f => f.Date.Future())
+        .RuleFor(auction => auction.Items, (f, createdAuction) => new List<Item>
+        {
+                    new Item
+                    {
+                        Id = f.Random.Number(1, 700),
+                        Name = f.Commerce.ProductName(),
+                        Brand = f.Commerce.Department(),
+                        BasePrice = f.Random.Decimal(50, 1000),
+                        Condition = f.PickRandom<Condition>(),
+                        AuctionId = createdAuction.Id
+                    }
+        }).Generate();
 
-    var repositoryMock = new Mock<IAuctionRepository>();
-    repositoryMock
-      .Setup(i => i.GetCurrent())
-      .Returns(auctionReturnExample);
+    var fakeRepository = new Mock<IAuctionRepository>();
+    fakeRepository
+        .Setup(i => i.GetCurrent())
+        .Returns(auctionReturnExample);
 
-    var useCase = new GetCurrentAuctionUseCase(repositoryMock.Object);
+    var useCase = new GetCurrentAuctionUseCase(fakeRepository.Object);
 
-    // ACT
+    // Act
     var auction = useCase.Execute();
 
-    // ASSERT
-    // Assert.NotNull(auction);
+    // Assert
     auction.Should().NotBeNull();
+    auction.Id.Should().Be(auctionReturnExample.Id);
+    auction.Name.Should().Be(auctionReturnExample.Name);
   }
 }
