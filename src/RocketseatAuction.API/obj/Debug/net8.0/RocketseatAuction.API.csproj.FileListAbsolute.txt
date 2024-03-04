@@ -53,10 +53,10 @@
 /home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.RocketseatAuction.API.props
 /home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/obj/Debug/net8.0/staticwebassets.pack.json
 /home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/obj/Debug/net8.0/scopedcss/bundle/RocketseatAuction.API.styles.css
-/home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/obj/Debug/net8.0/RocketseatAuction.API.csproj.CopyComplete
 /home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/obj/Debug/net8.0/RocketseatAuction.API.dll
 /home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/obj/Debug/net8.0/refint/RocketseatAuction.API.dll
 /home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/obj/Debug/net8.0/RocketseatAuction.API.pdb
 /home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/obj/Debug/net8.0/RocketseatAuction.API.genruntimeconfig.cache
 /home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/obj/Debug/net8.0/ref/RocketseatAuction.API.dll
 /home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/obj/Debug/net8.0/RocketseatAuction.API.sourcelink.json
+/home/t4inha/devspace/nlw-expert-csharp/src/RocketseatAuction.API/obj/Debug/net8.0/Rocketse.CC418525.Up2Date
